@@ -1,0 +1,479 @@
+{
+	"cards": {
+		"PUNCH": {
+			"name": "Fight",
+			"note": "PUNCH, VULN, and KICK all depict the same scene, but different frames of the battle. PUNCH is a suit punching the shit out of a tween; VULN is the suit and the tween locked in combat, neither making progress; and KICK is the tween sweeping the legs out from under the suit.",
+			"text": "+1 Umph"
+		},
+		"VULN": {
+			"name": "Struggle",
+			"text": ""
+		},
+		"KICK": {
+			"name": "Combat Trick",
+			"text": "+2 Umph"
+		},
+		"GRAVEROB": {
+			"name": "Infiltration",
+			"note": "Body Snatchers",
+			"text": "An opponent discards a card./Choose a card in his or her discard pile. This turn, you may buy that card as though it were in the LINE UP."
+		},
+		"PULLOUT": {
+			"name": "Tractor Beam",
+			"note": "A businessman being abducted while a sharply dressed Jovian is being sent down",
+			"text": "Dispose/An opponent adds a random card from his or her hand to the LINE UP. "
+		},
+		"FUCKYOU": {
+			"name": "Hostile Takeover",
+			"text": "Discard a card./An opponent discards a number of cards equal to that card's cost."
+		},
+		"SHADOWSTEP": {
+			"name": "Interim Management",
+			"text": "After actions, add this card to the line up./Gain a card in the LINE UP of cost 4 or less and put it in your hand."
+		},
+		"KICKREPLACE": {
+			"name": "Bait and Switch",
+			"text": "+2 Umph/Put a card from the LINE UP under your LOOT DECK, then replace it."
+		},
+		"PAC": {
+			"name": "Super P.A.C.",
+			"note": "A mob of lawyers and important looking people, walking as a group, some enhanced or connected to advanced technology, some flipping through large stacks of money, one carrying an expensive pistol; they mean to get something done",
+			"text": "+1 Umph/Choose any number of cards in the LINE UP with total cost less than or equal to your Umph. Put those cards on the bottom of your LOOT DECK, then replace them."
+		},
+		"HATEYOUALL": {
+			"name": "Market Crash",
+			"text": "Dispose/Each opponent discards a card."
+		},
+		"BANISHUMPH": {
+			"name": "Combustion Chamber",
+			"note": "The card goes in, power comes out",
+			"text": "Reveal a card in your hand. Put it on the bottom of your LOOT DECK, then gain Umph equal to its cost."
+		},
+		"NEXTP": {
+			"name": "Thought Retracter",
+			"note": "A device that makes one come back to a previous line of thinking",
+			"text": "Anarchy/+1 Umph/When you play your next Product this turn, Anarchy again."
+		},
+		"KICKSTARTER": {
+			"name": "Power Anomaly",
+			"note": "",
+			"text": "Each player discards a card./If a card of cost 1 was discarded, +3 Umph. Otherwise, +1 Umph."
+		},
+		"CODES": {
+			"name": "Launch Codes",
+			"note": "The Invaders' endgame involves manipulating the government into handing over access to their weapon supplies",
+			"text": "Reveal your hand./Play cards from your hand in the following order: a card of cost 2; a card of cost 1; a card of cost 5; and a card of cost 3./If you do, you win the game."
+		},
+		"BIGKICK": {
+			"name": "Parsimony",
+			"note": "Parsimony, in science, refers to the preference of a simpler solution; an alien walking out of an arsenal carrying the simplest weapon",
+			"text": "+3 Umph"
+		},
+		"DISCARDUMPH": {
+			"name": "Alpha Reactor",
+			"note": "An 'alpha' personality version of combustion chamber.",
+			"text": "An opponent discards a card./Gain Umph equal to that card's cost."
+		},
+		"DIAPERDRAW": {
+			"name": "Mesoscale Communicator",
+			"note": "Mesoscale is a reference to the Kentucky Mesonet my (bryan's) current employer.",
+			"text": "Dispose/Draw a card."
+		},
+		"BLOODSUCK": {
+			"name": "Brain Probe",
+			"note": "Something like a metallic spine, sharp, pointy, but not yet bloody, that is obviously meant to go in one ear and out the other",
+			"text": "Each opponent loses 1 Point./Gain Umph equal to the Points lost this way."
+		},
+		"DRAWLATER": {
+			"name": "Pipe Fetcher",
+			"note": "He's a little dude that doesn't fetch smoking pipes; he brings people their plumbing, oftentimes pulling it right out of the wall as a gift",
+			"text": "+1 Umph/Draw an extra card for next turn."
+		},
+		"INFINITEDIAPER": {
+			"name": "Back Alley Gazumper",
+			"note": "Gazump means to buy something promised to someone else; this is a fishy Jovian up to fishy business in what appears to be a black market trade",
+			"text": "Dispose/After actions, you may put this card and one other card in play on top of their owners' PLAY DECKS."
+		},
+		"DIGFORJ": {
+			"name": "Pogrom Enforcer",
+			"note": "A pogrom is a riot aimed at eradicating a group of people; imagine a cross between Dog the bounty hunter, inspector gadget, and a beefy alien",
+			"text": "+1 Umph/Each player reveals the top three cards of his or her PLAY DECK, puts all Jovians back on top in any order, and then puts the rest in his or her discard pile."
+		},
+		"TRAITOR": {
+			"name": "Master Traiter, Ugog",
+			"note": "Born on a space station hiding his people inside the gas giant, Jupiter, Ugog was corrupted by the Invaders, the darksiders of his species, through a transmission device he wired together as a kid. Believing it for the greater good, he disclosed the location of the space station, setting in motion the events leading up to the current, pre-apocalyptic war on Earth.",
+			"text": "Search an opponent's PLAY DECK for a card of cost 5 or less and reveal it./Once this turn, you may copy that card's effect./That opponent shuffles the revealed card back into his or her PLAY DECK."
+		},
+		"MULLIGAN": {
+			"name": "Reshaper Servant",
+			"note": "Works for COPY",
+			"text": "+1 Umph/If you have played no other cards this turn, you may discard your hand and draw that many cards."
+		},
+		"SWAPTWO": {
+			"name": "Jovian Experimenter",
+			"text": "+2 Umph/Swap the top cards of two decks."
+		},
+		"TYPEDIG": {
+			"name": "Concierge of the Invaders",
+			"text": "Lure/Choose a card type. Reveal cards from any player's LOOT DECK until you reveal a card of that type. Add it to the LINE UP, then put the others on the bottom of that player's LOOT DECK in a random order."
+		},
+		"WEDGE": {
+			"name": "Make Allies",
+			"note": "The Invaders signing deals/corrupting Earthlings, seeing the potential in enslaving us and stealing our weapon supplies",
+			"text": "If there are two or more Suits or Products in the LINE UP, +3 Umph./Otherwise, +2 Umph."
+		},
+		"DRAWBOT": {
+			"name": "Hermes's Hightops",
+			"note": "'Each time his shoes are passed down, Hermes rejoices in the birth of a new hero.'",
+			"text": "Maintain/Once a turn, you may draw a card, then put a card from your hand on the bottom of your PLAY DECK."
+		},
+		"COURSER": {
+			"name": "?",
+			"text": "This turn, reveal the top card of your LOOT DECK. You may buy it as though it were in the LINE UP."
+		},
+		"NOTCOURSER": {
+			"name": "The Living Louvre Masterpiece",
+			"note": "Old name was Living Painting of Fleeting Steeds",
+			"text": "+1 Umph/Add the top three cards of your LOOT DECK to the LINE UP. After actions, put three cards from the LINE UP on the bottom of your LOOT DECK."
+		},
+		"BUYPUNCH": {
+			"name": "Cupid's Quiver",
+			"note": "'The Quiver is speculated to be one in a set of four whose combination holds the fate of the Universe.'",
+			"text": "When you buy or gain a card this turn, +1 Umph."
+		},
+		"OTHERUMPH": {
+			"name": "Pantheum of Tiny Gods",
+			"note": "A small army of small statues of the Pantheon gods",
+			"text": "+1 Umph for each other card you own in play."
+		},
+		"CHECKTOP": {
+			"name": "Medusa's Shampoo",
+			"note": "'By day he is a balding electrician, but by night he is ruthless supervillain, Solid Scalp.'",
+			"text": "You may look at and put into any player's discard pile the top card of your PLAY DECK, then draw a card."
+		},
+		"DIGONE": {
+			"name": "Fortune-Inscribed Vase",
+			"text": "+1 Umph/Look at the top three cards of your LOOT DECK. Add one to the LINE UP and put the rest on the bottom of your LOOT DECK in any order."
+		},
+		"PUNCHKICKKICK": {
+			"name": "Record of Discord",
+			"note": "A statue carving depicting a long ago war",
+			"text": "+1 Umph/Anarchy/Anarchy"
+		},
+		"GAMBLEKICK": {
+			"name": "?",
+			"text": "Reveal a Combat Trick in your hand, then reveal the top card of the Trick Deck. If your Combat Trick has more Luck, gain the other Combat Trick and put it in your hand."
+		},
+		"NICEKICKS": {
+			"name": "The Awaiting Chariot",
+			"note": "Given as a gift to the Jovians",
+			"text": "+2 Umph/When you play your next Combat Trick this turn, you may draw a card."
+		},
+		"RECKLESS": {
+			"name": "Reckless Spending",
+			"text": "Choose a card in the LINE UP. Discard cards at random until you have discarded cards with a total cost greater than or equal to the cost of that card. If you do, gain it."
+		},
+		"COCAINE": {
+			"name": "Dr. Zapper's Energy Tapper",
+			"text": "Draw two cards./Draw one fewer cards next turn."
+		},
+		"LUCKYUMPH": {
+			"name": "Pickled Surpise",
+			"note": "Granny's",
+			"text": "Reveal the top card of the Trick Deck. Gain Umph equal to its Luck."
+		},
+		"TRIPANARCHY": {
+			"name": "Ol' Betty Freedom",
+			"note": "A lovable logo, powerful only in her status as symbol of the rebellion; reference to Betsy Ross and the American Revolution",
+			"text": "Anarchy/Anarchy/Anarchy"
+		},
+		"UNKICK": {
+			"name": "Srocs of Many Colors",
+			"note": "Reference to Crocs and Joseph's Coat; multicolored socks with thos dumb holes in them; flavor text talks about fashion trends",
+			"text": "+1 Umph, then +1 Umph for each Combat Trick in your discard pile./You may shuffle any number of Combat Tricks from your discard pile into the Trick Deck."
+		},
+		"GAINKICK": {
+			"name": "Encyclopedia Combatica",
+			"text": "You may gain a Combat Trick from the Trick Deck or LINE UP."
+		},
+		"OLDSPRAYPAINT": {
+			"name": "?",
+			"text": "+2 Umph/Once this turn, you may play a card as a copy of this card without this effect."
+		},
+		"REVISEDSPRAYPAINT": {
+			"name": "Graffiti Tags",
+			"text": "+1 Umph for each copy of this card in play./This turn, you may play any number of Combat Tricks and one other card as though they were copies of this card, except without this effect."
+		},
+		"DEALTKICK": {
+			"name": "Hard-Lit Effigy",
+			"text": "Reveal the top card of the Trick Deck. If it has even Luck, +2. Otherwise, +1./Anarchy"
+		},
+		"EVENREPLACE": {
+			"name": "Failure-Prone Outcast",
+			"text": "Lure/Draw a card/When you buy or gain this card, if its cost was even, you may put a card in the LINE UP on the bottom of your LOOT DECK, then replace it."
+		},
+		"DRAWTWO": {
+			"name": "Lickety Splitter",
+			"note": "A double pun on split in two and lickety-split",
+			"text": "Draw 2 cards"
+		},
+		"BOTTOTOP": {
+			"name": "Pancake Flipper",
+			"note": "I'm not entirely sure what this alien does; I'm not sure anybody knows; we should be really...intrigued by its design; tweens should be trying to make heads of tails of it, even questioning whether it's real and not a piece of art",
+			"text": "+1 Umph/Look at the bottom of your PLAY DECK. You may put that card on top."
+		},
+		"RECLAIMJ": {
+			"name": "The Jovians Arrive",
+			"note": "A bunch of tweens/hipsters/fanatics standing around in an Area 51 sort of setting when the Jovians first arrive, running from the Invaders",
+			"text": "Put up to three Jovians from your discard pile in your hand."
+		},
+		"PLUSDRAWMAYBE": {
+			"name": "Oddities Hunter",
+			"note": "An alien version of Ripley, intrigued by shrunken heads and Zunes",
+			"text": "+1 Umph/Reveal the top card of your PLAY DECK. If its cost is odd, draw it."
+		},
+		"GAINKICKSINLINE": {
+			"name": "Sensei Snickersnee",
+			"note": "Tweens dressed in martial art garb being trained by a Jovian elder",
+			"text": "+1 Umph/Gain any number of Combat Tricks in the LINE UP with total Luck 7 or less."
+		},
+		"LUCKPUNCH": {
+			"name": "Nipper-Uppers",
+			"note": "A nip-up is a martial art technique where you flip yourself up from laying down to ready to fight; used in parkour, I imagine a lot of tweens and Jovians doing parkour through a city",
+			"text": "+1 Umph/If you have played a Combat Trick with Luck 3 or less this turn, you may put a card from your discard pile on top of your deck./If you have played a Combat Trick with Luck 4 or more this turn, you may draw a card."
+		},
+		"TYPESANARCHY": {
+			"name": "Interstellar Geneticist",
+			"note": "A sort of mad doctor sewing alien things together",
+			"text": "Anarchy/Gain Umph equal to the number of types among cards you own in play."
+		},
+		"ICONDISCOUNT": {
+			"name": "?",
+			"text": "This turn, Icons in the LINE UP cost 1 less."
+		},
+		"INFINITEKICK": {
+			"name": "Enchanted, Returning Spear",
+			"text": "+2 Umph/After actions, if you bought or gained an Icon this turn, you may put this card on top of your PLAY DECK."
+		},
+		"BLANKETRIDDLER": {
+			"name": "Corrupted Access Log",
+			"text": "+1 Umph/You may buy the top card of any player's LOOT DECK as though it were a Combat Trick in the LINE UP."
+		},
+		"SELFDESTRUCT": {
+			"name": "Doomsday Clock",
+			"note": "The Artificial, powered by an advanced algorithm, has as a last resort blowing up the whole damn planet",
+			"text": "Maintain/After actions each turn, put a counter on this card equal to the number of Icons played this turn. When there are 10 or more counters, the game ends."
+		},
+		"BUYAPPEND": {
+			"name": "The Antikythera Cargo",
+			"note": "'Sought after by collectors and programmers alike, the Antikythera Cargo is said to hold untold knowledge into the possibilities of computing.'",
+			"text": "When you buy or gain a card this turn, add the top card of your LOOT DECK to the LINE UP."
+		},
+		"LINEPUNCH": {
+			"name": "High Magnitude Numerals",
+			"text": "+1 Umph for each card in the LINE UP."
+		},
+		"BLANKETLURE": {
+			"name": "Ephemeral Emoticon",
+			"text": "This turn, each card in the LINE UP gains Lure."
+		},
+		"LOOTCHARM": {
+			"name": "Plato's Drop-Shadow",
+			"text": "Reveal the top card of your LOOT DECK, then choose: copy that card's effect; or add it to the LINE UP."
+		},
+		"LOWKICK": {
+			"name": "Threat Detection",
+			"text": "+2 Umph, then +2 Umph if there is a facedown card in play."
+		},
+		"DIAPERROB": {
+			"name": "Withdrawal",
+			"note": "Reference to the business term",
+			"text": "Dispose/Add a card in play of cost 2 or more to the LINE UP."
+		},
+		"ANTICOURSER": {
+			"name": "Insider Trading",
+			"text": "+1 Umph/Add the top card of each player's LOOT DECK to the LINE UP, then put a card from the LINE UP on top of each player's LOOT DECK."
+		},
+		"GAIN": {
+			"name": "?",
+			"text": "Gain a card in the LINE UP."
+		},
+		"CHEAPKICK": {
+			"name": "?",
+			"text": "+2 Umph"
+		},
+		"GRAVECOPY": {
+			"name": "?",
+			"text": "Copy the effect of a card of cost 4 or less in any discard pile."
+		},
+		"DRAWTOP": {
+			"name": "?",
+			"text": "Lure/Draw 2 cards, then put a card from your hand on top of your PLAY DECK."
+		},
+		"NEWSPRAYPAINT": {
+			"name": "?",
+			"text": "+1 Umph/Put a card from the LINE UP under your LOOT DECK, then replace it./This turn, you may play cards as copies of this card."
+		},
+		"VPDRAW": {
+			"name": "Cyborg Overclocker",
+			"text": "Lure/Draw a card./When you buy or gain this card from the LINE UP, gain 2 Points."
+		},
+		"TOPSAME": {
+			"name": "Gubbins Sorter",
+			"note": "Gubbins means bits of things, so this alien machine is designed with the sole task of sifting through doodads",
+			"text": "+2 Umph/Reveal the top 2 cards of your PLAY DECK. If they share a card type, draw them. Otherwise, put them back on top in any order."
+		},
+		"TOWER": {
+			"name": "Festooned Tower",
+			"note": "An overly ornate and decorated server tower; like the ones from that credit karma commercial, but exaggerated",
+			"text": "The next time you buy an Icon this turn, gain a Point./The next time you would buy a Suit this turn, it costs 1 less./The next time you buy a Product this turn, +1 Umph./The next time you buy a Jovian this turn, draw a card."
+		},
+		"ISTOPBIG": {
+			"name": "Upgrade the Hard Drives",
+			"note": "Like a sysadmin working on a RAID rack, but also an alien",
+			"text": "Reveal the top card of your PLAY DECK. If it costs 3 or more, you may swap it with a card in the LINE UP. Otherwise, draw it."
+		},
+		"LUREREPREP": {
+			"name": "?",
+			"text": "Lure/Put a card from the LINE UP under your LOOT DECK, then replace it./Put another card from the LINE UP under your LOOT DECK, then replace it too."
+		},
+		"COPY": {
+			"name": "Quicksilver Reshaper",
+			"note": "He himself isn't quicksilver, but he commands a quicksilver mold as easily as his own thoughts",
+			"text": "Play this card as a copy of any card you own in play."
+		},
+		"DELOOTER": {
+			"name": "Delooter",
+			"note": "A fatish, vacuum-bot cleaning with a dust pan and broom",
+			"text": "+1 Umph/You may put a card from your hand or dicard pile on the bottom of your LOOT DECK."
+		},
+		"BUYDRAW": {
+			"name": "Possessed Statue of Proserpina",
+			"note": "'Blessing all those who stand in her presence with longevity, she has been stolen countless times and passed between governments for centuries.'",
+			"text": "When you buy or gain a card this turn, you may draw a card."
+		},
+		"BUYAGAIN": {
+			"name": "The Serpent's Bangle",
+			"text": "Maintain/Once a turn, you may buy a card in your discard pile as though it were in the LINE UP and put it in your hand."
+		},
+		"NAMEDISCOUNT": {
+			"name": "Mercury's Missing Coins",
+			"text": "Choose a card you own in play. This turn, cards in the LINE UP with that card's name cost 1 less."
+		},
+		"SHADOWHAND": {
+			"name": "?",
+			"text": "After actions, put this card on the bottom of your PLAY DECK./Put a card of cost 4 or less from your discard pile in your hand."
+		},
+		"DUPLICATES": {
+			"name": "Repetition Relic",
+			"text": "Sort your discard pile into groups by name. +3 Umph for each group with more than one card."
+		},
+		"KICKBOT": {
+			"name": "Underground Titan",
+			"note": "Reference to the Cardiff Giant and the Titan missle explosion. 'Should he awaken, the destruction would be catastophic. It is therefore misfortunate that he is not a sound sleeper.'",
+			"text": "+2 Umph/When you buy or gain a card this turn, you may put it on the bottom of your PLAY DECK."
+		},
+		"PUNCHFLIP": {
+			"name": "Incisive Helmet",
+			"text": "Maintain/Once a turn, gain +1 Umph, then reveal the top card of your PLAY DECK. You may put it on the bottom of your PLAY DECK."
+		},
+		"CHEAPESTUMPH": {
+			"name": "?",
+			"text": "Gain Umph equal to the lowest cost of cards in the LINE UP."
+		},
+		"BLUFF": {
+			"name": "?",
+			"text": "Each player puts a card from his or her hand facedown. Reveal those cards. The card with the lowest cost or those tied for the lowest cost are added to the LINE UP. Return each other to its owner's hand."
+		},
+		"PUNCHREPLACE": {
+			"name": "?",
+			"text": "+1 Umph/Put a card from the LINE UP under your LOOT DECK, then replace it."
+		},
+		"WORDSMITH": {
+			"name": "Party Wordsmith, Jere",
+			"note": "A speech-writer, Jere gives politicians the power to say whatever they want to say, and for constituents to hear whatever they want to hear.",
+			"text": "Maintain/When you play this card, put a card from your hand under it./Once a turn, you may copy that card's effect."
+		},
+		"MIRRORVP": {
+			"name": "?",
+			"text": "Maintain/When an opponent buys or gains a card, if that card shares a name with a card in your discard pile, gain Points equal to that card's worth."
+		},
+		"HORSETRADE": {
+			"name": "?",
+			"text": "Swap a card you own in play with a card in the LINE UP of equal cost or less."
+		},
+		"DIAPERBOUNCE": {
+			"name": "?",
+			"text": "Dispose/You may put a card in play on bottom of its owner's PLAY DECK."
+		},
+		"BIGPDISCOUNT": {
+			"name": "?",
+			"text": "This turn, Products in the LINE UP cost 1 less for each copy of this card in play."
+		},
+		"GUNS": {
+			"name": "Big Guns",
+			"text": "+2 Umph, then +2 Umph for each Product in your discard pile of cost 5 or more."
+		},
+		"MAINKICK": {
+			"name": "Academy of Law Enforcement",
+			"text": "Maintain/Once a turn, +2 Umph."
+		},
+		"BFD": {
+			"name": "Double Action",
+			"note": "A sheriff, dark glasses glinting in the Miami sun, a double barrel shotgun held casually",
+			"text": "+4 Umph/+4 Umph next turn"
+		},
+		"DOOVER": {
+			"name": "Due Preparation",
+			"note": "A biblical reference to 1 Chronicles 15:12-14",
+			"text": "Put all other cards you own in play on top of your deck in any order."
+		},
+		"DRAWANDDISCARD": {
+			"name": "?",
+			"text": "Draw 2 cards, then discard 2 cards."
+		},
+		"DRAWANDBOT": {
+			"name": "Course-Correcting Console",
+			"text": "Draw 2 cards, then put 2 cards from your hand on the bottom of your PLAY DECK in any order."
+		},
+		"TOPKICK": {
+			"name": "Combat Boots",
+			"note": "Not army boots, but something ridiculously decked out, like Batman would wear",
+			"text": "+1 Umph/Anarchy/You may gain a Combat Trick from the Trick Deck and put it on top of your PLAY DECK."
+		},
+		"TOPDIFF": {
+			"name": "?",
+			"text": "+2 Umph/Reveal the top two cards of your PLAY DECK. If two different types were revealed, you may discard them and put up to two cards from your discard pile on top of your PLAY DECK. Otherwise, put them back on top in any order."
+		},
+		"GRAVESHUFFLE": {
+			"name": "Auto-Reloader",
+			"text": "Put your discard pile on the bottom of your PLAY DECK in a random order."
+		},
+		"BADLUCK": {
+			"name": "Involuntary Dissolution",
+			"text": "Each player reveals a Combat Trick from the Trick Deck. Each player who revealed a card with even Luck loses a Point. Shuffled the revealed cards back into the Trick Deck."
+		},
+		"FENGSHUI": {
+			"name": "Equalizer",
+			"text": "If there are no Combat Tricks in the LINE UP, draw a card./Otherwise, +2 Umph and put any number of Combat Tricks in the LINE UP with total Luck 5 or less on the bottom of your LOOT DECK, then replace them."
+		},
+		"UNFAIRDIE": {
+			"name": "The Soothsayer's Dice",
+			"text": "You may put a Combat Trick from your discard with even Luck on top of your PLAY DECK, then another with odd Luck on the bottom of your PLAY DECK."
+		},
+		"OVERDRIVE": {
+			"name": "Haunted Gear Train",
+			"note": "'Cleaning crews have left reports that late Wednesday nights, all goes quiet at the Data Center except the ghostly whirring of the haunted gears.'",
+			"text": "+1 Umph/When you would add a card to the LINE UP this turn, you may instead gain +2 Umph."
+		},
+		"UNIFORMITY": {
+			"name": "Aligned Model of the Stars, Armillary",
+			"note": "Armillary, named after the armillary sphere, is the central coordination process of the Artificial; imagine her controlling an armillary sphere as though she were performing voodoo. 'When she's happy, no one else is happy.'",
+			"text": "If all cards in the LINE UP share a team or a type, +5 Umph. Otherwise, +1 Umph."
+		},
+		"CLEANUP": {
+			"name": "Abduction Lightshow",
+			"text": "Choose a type, then put all cards of that type from the LINE UP under your LOOT DECK and replace them."
+		}
+	}
+}

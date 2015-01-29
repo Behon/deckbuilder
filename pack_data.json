@@ -1,0 +1,129 @@
+{
+	"packs": {
+		"VS": [
+			["GRAVEROB",    3, 4, 1],
+			["PULLOUT",     2, 5, 2],
+			["BADLUCK",     2, 3, 2],
+			["FUCKYOU",     1, 7, 3],
+			["SHADOWSTEP",  3, 4, 1],
+			["KICKREPLACE", 2, 6, 2],
+			["ANTICOURSER", 2, 5, 2],
+			["HATEYOUALL",  3, 2, 1]
+		],
+		"VP": [
+			["BANISHUMPH",  3, 4, 1],
+			["NEXTP",       2, 5, 2],
+			["KICKSTARTER", 2, 3, 2],
+			["CODES",       1, 7, 3],
+			["BIGKICK",     3, 4, 1],
+			["DISCARDUMPH", 2, 4, 2],
+			["DIAPERDRAW",  2, 4, 2],
+			["BLOODSUCK",   3, 2, 1]
+		],
+		"VJ": [
+			["DRAWLATER",      3, 3, 1],
+			["INFINITEDIAPER", 2, 2, 2],
+			["DIGFORJ",        2, 3, 2],
+			["TRAITOR",        1, 6, 3],
+			["MULLIGAN",       3, 2, 1],
+			["TYPEDIG",        2, 3, 2],
+			["WEDGE",          2, 3, 2],
+			["SWAPTWO",        3, 4, 1]
+		],
+		"TI": [
+			["DRAWBOT",       3, 3, 1],
+			["NOTCOURSER",    2, 4, 2],
+			["BUYPUNCH",      2, 3, 2],
+			["OTHERUMPH",     1, 6, 3],
+			["CHECKTOP",      3, 3, 1],
+			["DIGONE",        2, 3, 2],
+			["PUNCHKICKKICK", 2, 4, 2],
+			["NICEKICKS",     3, 3, 1]
+		],
+		"TP": [
+			["RECKLESS",          3, 3, 1],
+			["COCAINE",           2, 4, 2],
+			["LUCKYUMPH",         2, 4, 2],
+			["TRIPANARCHY",       1, 7, 3],
+			["UNKICK",            3, 3, 1],
+			["GAINKICK",          2, 3, 2],
+			["REVISEDSPRAYPAINT", 2, 3, 2],
+			["DEALTKICK",         3, 3, 1]
+		],
+		"TJ": [
+			["EVENREPLACE",     3, 3, 1],
+			["DRAWTWO",         2, 4, 2],
+			["BOTTOTOP",        2, 2, 2],
+			["RECLAIMJ",        1, 6, 3],
+			["PLUSDRAWMAYBE",   3, 2, 1],
+			["GAINKICKSINLINE", 2, 4, 2],
+			["TYPESANARCHY",    2, 3, 2],
+			["LUCKPUNCH",       3, 4, 1]
+		],
+		"AI": [
+			["BLANKETRIDDLER", 3, 3, 1],
+			["OVERDRIVE",      2, 3, 2],
+			["UNIFORMITY",     2, 3, 2],
+			["SELFDESTRUCT",   1, 7, 3],
+			["BUYAPPEND",      3, 4, 1],
+			["LINEPUNCH",      2, 7, 2],
+			["BLANKETLURE",    2, 5, 2],
+			["LOOTCHARM",      3, 3, 1]
+		],
+		"AS": [
+			["LOWKICK",       3, 3, 1],
+			["DIAPERROB",     2, 5, 2],
+			["PAC",           2, 4, 2],
+			["GAIN",          1, 5, 3],
+			["CHEAPKICK",     3, 2, 1],
+			["GRAVECOPY",     2, 3, 2],
+			["DRAWTOP",       2, 4, 2],
+			["NEWSPRAYPAINT", 3, 5, 1]
+		],
+		"AJ": [
+			["VPDRAW",     3, 6, 1],
+			["TOPSAME",    2, 4, 2],
+			["FENGSHUI",   2, 4, 2],
+			["TOWER",      1, 5, 3],
+			["ISTOPBIG",   3, 4, 1],
+			["COPY",       2, 4, 2],
+			["DELOOTER",   2, 4, 2],
+			["CLEANUP", 3, 5, 1]
+		],
+		"RI": [
+			["BUYDRAW",      3, 3, 1],
+			["BUYAGAIN",     2, 5, 2],
+			["INFINITEKICK", 2, 3, 2],
+			["NAMEDISCOUNT", 1, 6, 3],
+			["UNFAIRDIE",    3, 4, 1],
+			["DUPLICATES",   2, 5, 2],
+			["KICKBOT",      2, 3, 2],
+			["PUNCHFLIP",    3, 3, 1]
+		],
+		"RS": [
+			["CHEAPESTUMPH", 3, 4, 1],
+			["BLUFF",        2, 4, 2],
+			["PUNCHREPLACE", 2, 5, 2],
+			["WORDSMITH",    1, 7, 3],
+			["SHADOWHAND",   3, 5, 1],
+			["DIAPERBOUNCE", 2, 3, 2],
+			["?",            2, 4, 2],
+			["HORSETRADE",   3, 5, 1]
+		],
+		"RP": [
+			["GUNS",           3, 4, 1],
+			["MAINKICK",       2, 4, 2],
+			["BFD",            2, 6, 2],
+			["DOOVER",         1, 8, 3],
+			["DRAWANDBOT",     3, 2, 1],
+			["TOPKICK",        2, 4, 2],
+			["TOPDIFF",        2, 4, 2],
+			["GRAVESHUFFLE",   3, 3, 1]
+		]
+	},
+	"basic": [
+		["PUNCH", 1, 0],
+		["VULN",  1, 0],
+		["KICK",  3, 0]
+	]
+}

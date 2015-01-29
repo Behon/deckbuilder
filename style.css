@@ -1,0 +1,165 @@
+html, body {margin:0;padding:0;font-size:0;font-family:"Clear sans Thin",arial}
+
+#menu {
+/*	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.60);
+	height: 100%;
+	width: 100%;*/
+}
+
+#menu-ul {
+	-webkit-columns: 5;
+	/*background: #fff;*/
+/*	width: 300px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	border-radius: 40px;*/
+}
+
+#menu-ul li {
+	list-style: none;
+	color: red;
+	text-decoration: underline;
+	font-family: "Clear sans Thin", arial;
+	font-size: 11pt;
+}
+
+#menu-ul li:hover {
+	color: orange;
+}
+
+#opponent div, #me div, #middle div {
+	display: inline-block;
+	font-family: "Clear sans Thin", arial;
+	font-size: 8pt;
+}
+
+#opponent .hand {
+	height: 104px;
+	width: calc(100% - 246px);
+	background: orange;
+}
+
+#me .hand {
+	height: 104px;
+	width: calc(100% - 246px);
+	background: orange;
+}
+
+#opponent .discard {
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#me .discard {
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#opponent .playdeck {
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#me .playdeck {
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#kicks {
+	margin-top: -52px;
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#opponent .loot {
+	height: 104px;
+	width: 82px;
+	background: orange;
+}
+
+#lineup {
+	height: 104px;
+	width: calc(100% - 82px);
+	background: orange;
+}
+
+#side {
+	height: 100%;
+	width: 82px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	overflow-y: auto;
+	background: green;
+}
+
+#me .loot {
+	margin-top: -52px;
+	height: 104px;
+	width: 82px;
+	background: orange;
+	overflow: hidden;
+}
+
+#opponent .played {
+	height: 104px;
+	width: 100%;
+	background: #ddd;
+}
+
+#me .played {
+	height: 104px;
+	width: 100%;
+	background: #ddd;
+}
+
+#meta {
+	font-size: 10pt;
+	color: #fff;
+	background: #444;
+	text-align: right;
+}
+
+.cardfront, .cardback {
+	border: 1px solid #000;
+	border-radius: 2px;
+	height: 100px;
+	width: 78px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	float: left;
+	margin: 1px;
+	background: #fff;
+}
+
+.cardfront p, .cardback p {
+	font-size: 8pt;
+	font-family: "Clear Sans Thin", arial;
+	margin: 0;
+}
+
+.target.cardfront {
+	background: #eee;
+}
+
+.cardback {
+	background: #bbb;
+}
+
+.target.cardback, .target .cardback {
+	background: #ccc;
+}

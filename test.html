@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			html, body {margin:0;padding:0}
+
+			#menu {
+				position: absolute;
+				background: rgba(0,0,0,0.60);
+				height: 100%;
+				width: 100%;
+			}
+
+			#menu-ul {
+				background: #fff;
+				width: 300px;
+				position: absolute;
+				left: 50%;
+				margin-left: -150px;
+				border-radius: 40px;
+			}
+
+			#menu-ul li {
+				list-style: none;
+				color: red;
+				text-decoration: underline;
+				font-family: "Clear sans Thin", arial;
+				font-size: 11pt;
+			}
+
+			#menu-ul li:hover {
+				color: orange;
+			}
+
+			#top-hand {
+				position: absolute;
+				left: 168px;
+				top: 0;
+				height: 104px;
+				width: calc(100% - 168px);
+				background: orange;
+			}
+
+			#bot-hand {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 104px;
+				width: calc(100% - 168px);
+				background: orange;
+			}
+
+			#top-discard {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#bot-discard {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#top-play-deck {
+				position: absolute;
+				left: 84px;
+				top: 0;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#bot-play-deck {
+				position: absolute;
+				right: 84px;
+				bottom: 0;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#kick-deck {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -52px;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#top-loot-deck {
+				position: absolute;
+				left: 84px;
+				top: 50%;
+				margin-top: -52px;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#line {
+				position: absolute;
+				left: 168px;
+				top: 50%;
+				margin-top: -52px;
+				height: 104px;
+				width: calc(100% - 252px);
+				background: orange;
+			}
+
+			#bot-loot-deck {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -52px;
+				height: 104px;
+				width: 82px;
+				background: orange;
+				overflow: hidden;
+			}
+
+			#top-play {
+				position: absolute;
+				left: 0;
+				top: 106px;
+				height: 104px;
+				width: 100%;
+				background: #ddd;
+			}
+
+			#bot-play {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: 54px;
+				height: 104px;
+				width: 100%;
+				background: #ddd;
+			}
+
+			.opened {}
+			.closed {display: none}
+
+			.card {
+				border: 1px solid #000;
+				height: 100px;
+				width: 80px;
+				overflow-x: hidden;
+				overflow-y: auto;
+				float: left;
+				margin: 1px;
+				background: #fff;
+			}
+
+			.facedown p {
+				display: none;
+			}
+
+			.card p {
+				font-size: 8pt;
+				font-family: "Clear Sans Thin", arial;
+				margin: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			// Just an example
+			var game_data = {
+				"GRAVEROB-0": { // first GRAVEROB
+					"t": 123412451, // time last touched
+					"name": "?",
+					"cost": 4,
+					"worth": "@",
+					"location": "bot-loot",
+					"position": 3, // not top, nor second, but third; only used when in a deck
+					"modes": "facedown", // either "", "facedown", or "revealed"; only used when in play or top of a deck
+					"text": "An opponent discards a card./Choose a card in his or her discard pile. This turn, you may buy that card as though it were in the LINE UP."
+				},
+				"SHADOWSTEP-0": {
+					"name": "?",
+					"cost": 4,
+					"worth": "@",
+					"location": "bot-hand",
+					"position": "",
+					"modes": "",
+					"text": "After actions, add this card to the line up./Gain a card in the LINE UP of cost 4 or less to your hand."
+				}
+			};
+
+			// Menu Helpers
+			function closeMenu(){
+				var m = document.getElementById("menu");
+				m.setAttribute("class", "closed");
+			}
+
+			function openMenu(){
+				var m = document.getElementById("menu");
+				m.setAttribute("class", "opened");
+			}
+
+			function Menu(actions){
+				function MenuItem(label, action){
+					var li = document.createElement("li");
+					var text = document.createTextNode(label);
+					li.onclick = function(){
+						closeMenu();
+						action();
+					}
+
+					li.appendChild(text);
+					return li;
+				}
+
+				return function(){
+					var m = document.getElementById("menu-ul");
+					while (m.children.length){
+						m.removeChild(m.children[0]);
+					}
+
+					for (label in actions){
+						if (label !== "default"){
+							m.appendChild(MenuItem(
+								actions[label]!==actions["default"]? label : label+" (default)", actions[label]));
+						}
+					}
+
+					m.appendChild(MenuItem("Cancel", function(){}));
+				};
+			}
+
+			// Card Helpers
+			function Card(name, cost, worth, text, modes){
+				modes = modes || "";
+				var div = document.createElement("div");
+				var name_p = document.createElement("p");
+				var name_b = document.createElement("b");
+				var cost_worth_p = document.createElement("p");
+				var text_p = document.createElement("p");
+				cost_worth_p.appendChild(document.createTextNode("("+cost+") "+worth));
+				name_b.appendChild(document.createTextNode(name));
+				name_p.appendChild(name_b);
+				text_p.appendChild(document.createTextNode(text));
+				div.setAttribute("class", "card "+modes);
+				div.appendChild(cost_worth_p);
+				div.appendChild(name_p);
+				div.appendChild(text_p);
+				return div;
+			}
+
+			function setModes(card, modes){
+				modes = modes || "";
+				card.setAttribute("class", "card "+modes);
+			}
+
+			// Action and Options Helpers
+			function attachHandlers(e, deflt, menu){
+				var t = 0;
+				e.onclick = function(){
+					if (t){
+						window.clearTimeout(t);
+						t = 0;
+						deflt();
+					} else {
+						t = window.setTimeout(function(){
+							t = 0;
+							openMenu();
+							menu();
+						}, 300);
+					}
+				};
+			}
+
+			function AllOptions(id){
+				var actions = {
+					"Play": function(){moveCardToBotPlay(id)},
+					"Draw": function(){moveCardToBotHand(id)},
+					"Dispose": function(){moveCardToBotPlay(id, true)},
+					"Discard": function(){moveCardToBotDiscard(id)},
+					"Reveal": function(){setModes(document.getElementById(id), "revealed")},
+					"Put in Hand": function(){moveCardToBotHand(id)},
+					"Put Cards in Discard": function(){discardContainer(id)},
+					"Gain": function(){moveCardToBotDiscard(id)},
+					"View Cards": function(){viewContainer(id)},
+					"Add to Line Up": function(){moveCardToLine(id)},
+					"Top of Play Deck": function(){moveCardToBotPlayDeck(id)},
+					"Bottom of Play Deck": function(){moveCardToBotPlayDeck(id, true)},
+					"Top of Loot Deck": function(){moveCardToBotLootDeck(id)},
+					"Bottom of Loot Deck": function(){moveCardToBotLootDeck(id, true)},
+					"Top of Kick Deck": function(){moveCardToKickDeck(id)},
+					"Bottom of Kick Deck": function(){moveCardToKickDeck(id, true)}
+				};
+
+				return actions;
+			}
+
+			function BotHandOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["Play"];
+				return actions;
+			}
+
+			function BotPlayOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["Discard"];
+				return actions;
+			}
+
+			function BotDiscardOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["View Cards"];
+				return actions;
+			}
+
+			function BotPlayDeckOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["Draw"];
+				return actions;
+			}
+
+			function LineOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["Gain"];
+				return actions;
+			}
+
+			function BotLootDeckOptions(id){
+				var actions = AllOptions(id);
+				actions["default"] = actions["Add to Line Up"];
+				return actions;
+			}
+
+			// Movement Helpers
+			function refreshCard(id, actions){
+				var card_data = game_data[id];
+				var e = document.getElementById(id);
+				if (e){
+					e.parentNode.removeChild(e);
+				}
+
+				var card = Card(card_data["name"], card_data["cost"], card_data["worth"], card_data["text"]);
+				card.setAttribute("id", id);
+				setModes(card, card_data["modes"]);
+				attachHandlers(card, actions["default"], Menu(actions));
+				if (card_data["position"] !== ""){
+					var pos = card_data["position"];
+					var e = document.getElementById(card_data["location"]);
+					if (e.children.length <= pos){
+						document.getElementById(card_data["location"]).appendChild(card);
+					} else {
+						var ref = e.children[pos];
+						e.insertBefore(card, ref);
+						for (var i=0; i < e.children.length; ++i){
+							game_data[e.children[i].getAttribute("id")]["position"] = i;
+						}
+					}
+				} else {
+					document.getElementById(card_data["location"]).appendChild(card);
+				}
+			}
+
+			function moveCardToBotHand(id){
+				game_data[id]["location"] = "bot-hand";
+				game_data[id]["position"] = "";
+				game_data[id]["modes"] = "";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, BotHandOptions(id));
+			}
+
+			function moveCardToBotPlay(id, facedown){
+				game_data[id]["location"] = "bot-play";
+				game_data[id]["position"] = "";
+				game_data[id]["modes"] = facedown? "facedown" : "";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, BotPlayOptions(id));
+			}
+
+			function moveCardToBotDiscard(id){
+				game_data[id]["location"] = "bot-discard";
+				game_data[id]["position"] = "";
+				game_data[id]["modes"] = "";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, BotDiscardOptions(id));
+			}
+
+			function moveCardToBotPlayDeck(id, bottom){
+				game_data[id]["location"] = "bot-play-deck";
+				game_data[id]["position"] = bottom? document.getElementById("bot-play-deck").children.length : 0;
+				game_data[id]["modes"] = "facedown";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, BotPlayDeckOptions(id));
+			}
+
+			function moveCardToBotLootDeck(id, bottom){
+				game_data[id]["location"] = "bot-loot-deck";
+				game_data[id]["position"] = bottom? document.getElementById("bot-loot-deck").children.length : 0;
+				game_data[id]["modes"] = "facedown";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, BotLootDeckOptions(id));
+			}
+
+			function moveCardToKickDeck(id, bottom){
+				game_data[id]["location"] = "kick-deck";
+				game_data[id]["position"] = bottom? document.getElementById("kick-deck").children.length : 0;
+				game_data[id]["modes"] = "facedown";
+				game_data[id]["t"] = (new Date).getTime(); // TODO implement position in refreshCard
+				refreshCard(id, LineOptions(id));
+			}
+
+			function moveCardToLine(id){
+				game_data[id]["location"] = "line";
+				game_data[id]["position"] = "";
+				game_data[id]["modes"] = "";
+				game_data[id]["t"] = (new Date).getTime();
+				refreshCard(id, LineOptions(id));
+			}
+
+			function shuffleContainer(id){
+				var e = document.getElementById(id).parentNode;
+				var ids = [];
+				var child;
+				for (var i=0; i < e.children.length; ++i){
+					child = e.children[i];
+					ids.push(child.getAttribute("id"));
+				}
+
+				var i = ids.length, j, t;
+				while (i--){
+					j = Math.floor(Math.random()*i);
+					t = ids[i];
+					ids[i] = ids[j];
+					ids[j] = t;
+				}
+
+				var prefix = e.getAttribute("id").substr(0, 3);
+				if (prefix == "bot"){
+					for (var i=0; i < ids.length; ++i){
+						moveCardToBotPlayDeck(ids[i], true);
+					}
+				} else if (prefix == "top"){
+					for (var i=0; i < ids.length; ++i){
+						moveCardToTopPlayDeck(ids[i], true);
+					}
+				}
+			}
+
+			function discardContainer(id){
+				var e = document.getElementById(id).parentNode;
+				var ids = [];
+				var child;
+				for (var i=0; i < e.children.length; ++i){
+					child = e.children[i];
+					ids.push(child.getAttribute("id"));
+				}
+
+				var prefix = e.getAttribute("id").substr(0, 3);
+				if (prefix == "bot"){
+					for (var i=0; i < ids.length; ++i){
+						moveCardToBotDiscard(ids[i]);
+					}
+				} else if (prefix == "top"){
+					for (var i=0; i < ids.length; ++i){
+						moveCardToTopDiscard(ids[i]);
+					}
+				}
+			}
+
+			function viewContainer(id){
+				var e = document.getElementById(id).parentNode;
+				var actions = {
+					"Shuffle Cards to Bottom of Play Deck": function(){shuffleContainer(id)}
+				};
+
+				var child;
+				for (var i=0; i < e.children.length; ++i){
+					child = e.children[i];
+					actions[child.getAttribute("id")] = child.onclick;
+				}
+
+				var menu = Menu(actions);
+				menu();
+				openMenu();
+			}
+
+			window.onload = function(){
+				moveCardToBotHand("GRAVEROB-0");
+				moveCardToBotHand("SHADOWSTEP-0");
+			}
+
+			// TODO pushCardData every so often
+		</script>
+	</head>
+	<body>
+		<div id="top-hand"></div>
+		<div id="top-discard"></div>
+		<div id="top-play-deck"></div>
+		<div id="top-play"></div>
+		<div id="kick-deck"></div>
+		<div id="top-loot-deck"></div>
+		<div id="bot-loot-deck"></div>
+		<div id="line"></div>
+		<div id="bot-play"></div>
+		<div id="bot-hand"></div>
+		<div id="bot-discard"></div>
+		<div id="bot-play-deck"></div>
+		<div id="scoring-area"></div>
+		<div id="menu" class="closed">
+			<ul id="menu-ul">
+			</ul>
+		</div>
+	</body>
+</html>
